@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:JumpAPP.Controls"
+             x:Class="JumpAPP.Views.OrgamiserFormPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <AbsoluteLayout >
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"  
+        AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="30"/>
+
+
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" BackgroundColor="#A1C51E">
+
+                <StackLayout Grid.Row="0"  BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image Source="back"  HeightRequest="35" WidthRequest="25" Grid.Row="0"  Margin="20,0,0,0"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" >
+
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="Organiser"  TextColor="White" VerticalOptions="CenterAndExpand" Grid.Row="0" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                </StackLayout>
+            </StackLayout>
+            <ScrollView VerticalScrollBarVisibility="Default" Grid.Row="1">
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="1">
+
+                        <StackLayout VerticalOptions="CenterAndExpand" >
+                            <Entry Placeholder="Object" Text="{Binding Object}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <Editor Placeholder="Description" Text="{Binding Description}" HeightRequest="100" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Editor>
+                        </StackLayout>
+
+
+
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <local:DateTimePicker x:Name="StartDatePicker"    WidthRequest="350" HeightRequest="60" ></local:DateTimePicker>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand"  Margin="-60,0,0,0"  VerticalOptions="CenterAndExpand">
+                                <Image Source="calender" WidthRequest="30" HeightRequest="30">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+                            <!--DateSelected="{Binding Startdate}"-->
+                            <!--DateSelected="{Binding EndDate}"-->
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <local:DateTimePicker x:Name="EndDatePicker"  WidthRequest="350" HeightRequest="60" ></local:DateTimePicker>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand"  Margin="-60,0,0,0"  VerticalOptions="CenterAndExpand">
+                                <Image Source="calender" WidthRequest="30" HeightRequest="30">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"  NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Entry Placeholder="Status" Text="{Binding Status}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Entry Placeholder="Internal/External" Text="{Binding Internal}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Entry Placeholder="User" Text="{Binding User}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <Editor Placeholder="Notes" Text="{Binding Notes}" HeightRequest="100" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Editor>
+                        </StackLayout>
+
+
+
+
+
+
+                        <StackLayout Orientation="Horizontal"  BackgroundColor="LightGray"  VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                            <Frame  BackgroundColor="Transparent"  Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="350" HeightRequest="40">
+                                <Button Text="COMPANY DETAIL" Command="{Binding ShowHiddenRow0Command}" Margin="15,0,0,0" BackgroundColor="Transparent" FontSize="14" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand"  ></Button>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowHiddenRow0Command}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+
+                            </Frame>
+                            <Image Source="dropdown" Margin="0,0,15,0" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowHiddenRow0Command}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"  IsVisible="{Binding SLRow1}">
+                            <Entry Placeholder="Branch" Text="{Binding Branch}" PlaceholderColor="Gray" IsVisible="{Binding SLRow1}" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"  IsVisible="{Binding SLRow1}">
+                            <Entry Placeholder="Contact" Text="{Binding Contact}" PlaceholderColor="Gray" IsVisible="{Binding SLRow1}" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"  IsVisible="{Binding SLRow1}">
+                            <Entry Placeholder="Order" Text="{Binding Order}" PlaceholderColor="Gray" IsVisible="{Binding SLRow1}" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"  IsVisible="{Binding SLRow1}">
+                            <Entry Placeholder="Phase" Text="{Binding Phase}" PlaceholderColor="Gray" IsVisible="{Binding SLRow1}" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand"   IsVisible="{Binding SLRow1}">
+                            <Entry Placeholder="Ticket" Text="{Binding Ticket}" PlaceholderColor="Gray" IsVisible="{Binding SLRow1}" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Horizontal"  BackgroundColor="LightGray"  VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                            <Frame  BackgroundColor="Transparent"  Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="350" HeightRequest="40">
+                                <Button Text="DATA FOR EXPENSE REIMBURSEMENT" Command="{Binding ShowHiddenRow1Command}" Margin="15,0,0,0" BackgroundColor="Transparent" FontSize="14" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand"  ></Button>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowHiddenRow1Command}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+
+                            </Frame>
+                            <Image Source="dropdown" Margin="0,0,15,0" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowHiddenRow1Command}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                        </StackLayout>
+                        <Grid IsVisible="{Binding SLRow0}" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0">
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="0">
+                                    <Entry Placeholder="Miles" Text="{Binding Miles}" Keyboard="Numeric"  PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="0">
+                                    <Entry Placeholder="Fuel" Text="{Binding Fuel}" Keyboard="Numeric"   PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="0">
+                                    <Entry Placeholder="Toll" Text="{Binding Toll}" PlaceholderColor="Gray" Keyboard="Numeric"   TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="0">
+                                    <Entry Placeholder="Food" Keyboard="Numeric" Text="{Binding Food}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="1">
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="1">
+                                    <Entry Placeholder="Accomodation" Keyboard="Numeric"   Text="{Binding Accomodation}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="1">
+                                    <Entry Placeholder="Overnight" Keyboard="Numeric"   Text="{Binding Overnight}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="1">
+                                    <Entry Placeholder="For Away" Keyboard="Numeric"   Text="{Binding ForAway}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="1">
+                                    <Entry Placeholder="Others" Keyboard="Numeric" Text="{Binding Others}" PlaceholderColor="Gray" TextColor="Black" FontSize="18" HorizontalOptions="FillAndExpand"></Entry>
+                                </StackLayout>
+
+                            </StackLayout>
+
+                        </Grid>
+                        <StackLayout Grid.Column="1" Margin="0,20,0,0" VerticalOptions="CenterAndExpand">
+                            <Button Text="Submit" Command="{Binding SubmitCommand}" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="180" HeightRequest="50" CornerRadius="10" TextColor="White" BackgroundColor="#A1C51E" ></Button>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Grid>
+            </ScrollView>
+
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>

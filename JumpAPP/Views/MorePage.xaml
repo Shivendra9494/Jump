@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JumpAPP.Views.MorePage"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="8.8*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Text="MORE" TextColor="White" VerticalOptions="CenterAndExpand" Grid.Row="0" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+            </StackLayout>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2.5*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                            <Button CornerRadius="10" Command="{Binding FAQTap}" BackgroundColor="#A1C51E" Text="FAQs" TextColor="White" FontAttributes="Bold" FontSize="16" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"></Button>
+                        </StackLayout>
+                        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                            <Button CornerRadius="10" Command="{Binding TCTap}" BackgroundColor="#A1C51E" Text="T&amp;C" TextColor="White" FontAttributes="Bold" FontSize="16" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"></Button>
+                        </StackLayout>
+                        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                            <Button CornerRadius="10" Command="{Binding ContactTap}" BackgroundColor="#A1C51E" Text="Contact Us" TextColor="White" FontAttributes="Bold" FontSize="16" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

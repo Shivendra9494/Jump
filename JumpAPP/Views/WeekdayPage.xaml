@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:JumpAPP.Controls"
+             mc:Ignorable="d"
+             x:Class="JumpAPP.Views.WeekdayPage" BackgroundColor="White">
+    <ContentPage.Content>
+        <AbsoluteLayout >
+            <StackLayout Margin="0,60,0,0" HorizontalOptions="FillAndExpand" x:Name="stack" AbsoluteLayout.LayoutBounds="0,0,1,1"  
+        AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional">
+                <WebView HorizontalOptions="FillAndExpand" x:Name="browser" AbsoluteLayout.LayoutBounds="0,0,1,1"  
+        AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional">
+                    
+                    <!--<WebView.Source>
+                    <HtmlWebViewSource Html="{Binding Flag}" />
+                    -->
+                    <!--    <HtmlWebViewSource Html="&lt;html>&lt;body>&lt;p>The HTML string.&lt;/p>&lt;/body>&lt;/html>" />-->
+                    <!--
+                </WebView.Source>-->
+                </WebView>
+            </StackLayout>
+            <Image Source="dropdowns" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.95,0.95,90,90"   
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DropdownTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <controls:DatePickerCtrl Format="MMMM, yyyy" AbsoluteLayout.LayoutBounds="0.05,0.008,160,50"   
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional"></controls:DatePickerCtrl>
+            <Image Source="picker" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.05,0.033,140,20" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" />
+            <Image Source="mail" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.91,0.85,60,60" IsVisible="{Binding mail}"   
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" />
+
+            <Image Source="pdf" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.91,0.76,60,60" IsVisible="{Binding pdf}"  
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

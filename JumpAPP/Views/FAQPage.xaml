@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:JumpAPP.Controls"
+             x:Class="JumpAPP.Views.FAQPage"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="30"/>
+                
+                <RowDefinition Height="8.8*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" BackgroundColor="#A1C51E">
+
+                <StackLayout Grid.Row="0"  BackgroundColor="#A1C51E" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                    <Image Source="back"  HeightRequest="35" WidthRequest="25" Grid.Row="0"  Margin="20,0,0,0"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" >
+
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="FAQs" Margin="-20,0,0,0" TextColor="White" VerticalOptions="CenterAndExpand" Grid.Row="0" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView Grid.Row="2" Orientation="Vertical">
+
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="About Jump" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="16" FontAttributes="Bold">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AboutTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Image Source="dropdown" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="CenterAndExpand" HeightRequest="20" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AboutTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AboutTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="30" HorizontalOptions="FillAndExpand">
+                            <BoxView HeightRequest="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#A1C51E"></BoxView>
+
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding isVisible1}">
+                            <Label IsVisible="{Binding isVisible1}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                               FontSize="13" FontAttributes="None" TextColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+
+
+
+                    <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="What Should I do if I forget my Password?" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="15" FontAttributes="Bold">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ForgetTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Image Source="dropdown" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="CenterAndExpand" HeightRequest="20" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ForgetTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ForgetTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="30" HorizontalOptions="FillAndExpand">
+                            <BoxView HeightRequest="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#A1C51E"></BoxView>
+
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding isVisible2}">
+                            <Label IsVisible="{Binding isVisible2}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                               FontSize="13" FontAttributes="None" TextColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+                    <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Is my account set up yet?" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="15" FontAttributes="Bold">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AccountTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Image Source="dropdown" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="CenterAndExpand" HeightRequest="20" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AccountTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AccountTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="30" HorizontalOptions="FillAndExpand">
+                            <BoxView HeightRequest="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#A1C51E"></BoxView>
+
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding isVisible3}">
+                            <Label IsVisible="{Binding isVisible3}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                               FontSize="13" FontAttributes="None" TextColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+
+                    <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="How do reset my password?" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="15" FontAttributes="Bold">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ResetTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Image Source="dropdown" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="CenterAndExpand" HeightRequest="20" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ResetTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ResetTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="30" HorizontalOptions="FillAndExpand">
+                            <BoxView HeightRequest="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#A1C51E"></BoxView>
+
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding isVisible4}">
+                            <Label IsVisible="{Binding isVisible4}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                               FontSize="13" FontAttributes="None" TextColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+
+
+                    <StackLayout Grid.Row="4" Grid.Column="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="How do I know the site has a secure connections?" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="15" FontAttributes="Bold">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SecureTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Image Source="dropdown" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="CenterAndExpand" HeightRequest="20" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SecureTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SecureTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="30" HorizontalOptions="FillAndExpand">
+                            <BoxView HeightRequest="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#A1C51E"></BoxView>
+
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding isVisible5}">
+                            <Label IsVisible="{Binding isVisible5}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                               FontSize="13" FontAttributes="None" TextColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+
+                    <StackLayout Grid.Row="5" Grid.Column="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="What Should I do if I forget my Username" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="15" FontAttributes="Bold">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding UsernameTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Image Source="dropdown" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="CenterAndExpand" HeightRequest="20" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding UsernameTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding UsernameTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="30" HorizontalOptions="FillAndExpand">
+                            <BoxView HeightRequest="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#A1C51E"></BoxView>
+
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding isVisible6}">
+                            <Label IsVisible="{Binding isVisible6}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                               FontSize="13" FontAttributes="None" TextColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Grid>
+            </ScrollView>
+           
+
+          
+
+
+                
+
+                
+           
+            
+        </Grid>
+    </ContentPage.Content>
+        
+</ContentPage>

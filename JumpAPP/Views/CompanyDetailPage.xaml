@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JumpAPP.Views.CompanyDetailPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="WhiteSmoke">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" BackgroundColor="#A1C51E">
+
+                <StackLayout   BackgroundColor="#A1C51E" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                    <Image Source="back"  HeightRequest="35" WidthRequest="25" Grid.Row="0"  Margin="20,0,0,0"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" >
+                     
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                
+                <StackLayout  BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="Company Details" TextColor="White"  VerticalOptions="CenterAndExpand" Grid.Row="0" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                </StackLayout>
+            </StackLayout>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="locks" Grid.Row="1" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  />
+
+                <Label Grid.Row="1" Grid.Column="1" Text="Company Code" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Company_code}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="2" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+                <Image Source="user" Grid.Row="3" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  />
+
+                <Label Grid.Row="3" Grid.Column="1" Text="Alias" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="3" Grid.Column="2" Text="{Binding Alias}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="4" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+
+                <Image Source="Companys" Grid.Row="5" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  />
+
+                <Label Grid.Row="5" Grid.Column="1" Text="Company Name" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="5" Grid.Column="2" Text="{Binding Company_name}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="6" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+                <Image Source="vat" Grid.Row="7" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  />
+
+
+                <Label Grid.Row="7" Grid.Column="1" Text="VAT Number" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="7" Grid.Column="2" Text="{Binding Vat_number}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="8" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+                <Image Source="tax" Grid.Row="9" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  />
+
+
+                <Label Grid.Row="9" Grid.Column="1" Text="Tax Code" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="9" Grid.Column="2" Text ="{Binding Tax_code}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="10" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+
+                <Image Source="email" Grid.Row="11" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EmailICon}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Grid.Row="11" Grid.Column="1" Text="Email" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black">
+                   <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding EmailICon}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="11" Grid.Column="2" Text="{Binding Email}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EmailICon}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="12" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+                <Image Source="contact" Grid.Row="13" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PhoneICon}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+                <Label Grid.Row="13" Grid.Column="1" Text="Phone" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PhoneICon}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="13" Grid.Column="2" Text="{Binding Phone}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PhoneICon}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="14" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+                <Image Source="home" Grid.Row="15" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  />
+
+                <Label Grid.Row="15" Grid.Column="1" Text="Principal Address" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="15" Grid.Column="2" Text="{Binding Principle_Address}" LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="16" Margin="15,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#A1C51E"></BoxView>
+
+
+
+                <!--<Label Grid.Row="17" Grid.Column="1" Text="Company Code" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black"/>
+                <Label Grid.Row="17" Grid.Column="2" Text="Sarita Vihar New Delhi 11076"  LineBreakMode="NoWrap" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="15" TextColor="Gray"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="1" Grid.Row="18" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="#A1C51E"></BoxView>-->
+
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button BackgroundColor="#A1C51E" CornerRadius="5" FontSize="11" Command="{Binding CompanyBranch}" Text="Branches" TextColor="White"  VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="50" Grid.Column="1"></Button>
+                <Button BackgroundColor="#A1C51E" CornerRadius="5" FontSize="12"   Command="{Binding CompanyContact}" Text="Contact" TextColor="White" VerticalOptions="CenterAndExpand" WidthRequest="95" HeightRequest="50" Grid.Column="2"></Button>
+                <Button BackgroundColor="#A1C51E" CornerRadius="5" Text="Notes"  Command="{Binding CompanyNotes}" FontSize="12" TextColor="White"  VerticalOptions="CenterAndExpand" WidthRequest="95" Grid.Column="3" HeightRequest="50"></Button>
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

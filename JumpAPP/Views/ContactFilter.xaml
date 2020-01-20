@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:JumpAPP.Controls"
+             x:Class="JumpAPP.Views.ContactFilter">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="8.8*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" BackgroundColor="#A1C51E">
+
+                <StackLayout Grid.Row="0"  BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image Source="back"  HeightRequest="35" WidthRequest="25" Grid.Row="0"  Margin="20,0,0,0"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" >
+
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="Contact Details"  TextColor="White" VerticalOptions="CenterAndExpand" Grid.Row="0" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" BackgroundColor="#A1C51E" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="Reset" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" FontSize="13" TextColor="White"></Label>
+                </StackLayout>
+            </StackLayout>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  BackgroundColor="LightGray" Grid.Column="0">
+
+                    <StackLayout  Margin="0,20,0,0">
+                        <Label Text="Surname"  TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SurnameClick}" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+
+                    <StackLayout  Margin="0,20,0,0">
+                        <Label Text="First Name" TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding FirstClick}" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+
+
+                    <StackLayout  Margin="0,20,0,0">
+                        <Label Text="Company" TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CompanyClick}" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+
+
+                    <StackLayout Margin="0,20,0,0">
+                        <Label Text="Role" TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RoleClick}" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+
+                    <StackLayout Margin="0,20,0,0">
+                        <Label Text="Mobile Number" TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding MobileClick}" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <!--<ListView BackgroundColor="LightGray" Grid.Column="0" VerticalScrollBarVisibility="Never" SeparatorVisibility="None" SelectedItem="{Binding SelectedFilterContent}" ItemsSource="{Binding ItemFilterContent}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="True" Margin="0,0,0,0" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <Grid BackgroundColor="LightGray">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20"/>
+                                            <RowDefinition Height="Auto"/>
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="10"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Surname}" TextColor="Black" FontSize="14" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"></Label>
+                                    </Grid>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                <custom:CustomEntry  
+                             CornerRadius="15"  
+                             IsCurvedCornersEnabled="True"  
+                             BorderColor="YellowGreen"      
+                             HorizontalTextAlignment="Start"  
+                             FontSize="14"  
+                             HeightRequest="50"  
+                    Margin="0,15,0,0"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                             Placeholder="Enter Surname" IsVisible="{Binding SurnameVisible}"  
+                             PlaceholderColor="Gray"  
+                    Text="{Binding Surname}"
+                             TextColor="Black"  
+                             FontAttributes="None"  
+                            />
+                <custom:CustomEntry  
+                             CornerRadius="15"  
+                             IsCurvedCornersEnabled="True"  
+                             BorderColor="YellowGreen"      
+                             HorizontalTextAlignment="Start" IsVisible="{Binding FirstnameVisible}" 
+                             FontSize="14"  
+                             HeightRequest="50"  
+                    Margin="0,15,0,0"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                             Placeholder="Enter Firstname"  
+                             PlaceholderColor="Gray"  
+                    Text="{Binding Firstname}"
+                             TextColor="Black"  
+                             FontAttributes="None"  
+                            />
+
+
+
+
+                <custom:CustomEntry  
+                             CornerRadius="15"  
+                             IsCurvedCornersEnabled="True"  
+                             BorderColor="YellowGreen"      
+                             HorizontalTextAlignment="Start"  IsVisible="{Binding CompanyVisible}"
+                             FontSize="14"  
+                             HeightRequest="50"  
+                    Margin="0,15,0,0"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                             Placeholder="Enter Company"  
+                             PlaceholderColor="Gray"  
+                    Text="{Binding SelectedFilterContent}"
+                             TextColor="Black"  
+                             FontAttributes="None"  
+                            />
+
+
+
+
+                <custom:CustomEntry  
+                             CornerRadius="15"  
+                             IsCurvedCornersEnabled="True"  
+                             BorderColor="YellowGreen"      
+                             HorizontalTextAlignment="Start"  IsVisible="{Binding RoleVisible}"
+                             FontSize="14"  
+                             HeightRequest="50"  
+                    Margin="0,15,0,0"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                             Placeholder="Enter Role"  
+                             PlaceholderColor="Gray"  
+                    Text="{Binding SelectedFilterContent}"
+                             TextColor="Black"  
+                             FontAttributes="None"  
+                            />
+
+               <custom:CustomEntry  
+                             CornerRadius="15"  
+                             IsCurvedCornersEnabled="True"  
+                             BorderColor="YellowGreen"      
+                             HorizontalTextAlignment="Start"  IsVisible="{Binding MobileVisible}"
+                             FontSize="14"  
+                             HeightRequest="50"  
+                    Margin="0,15,0,0"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                             Placeholder="Enter Mobile Number"  
+                             PlaceholderColor="Gray"  
+                    Text="{Binding Mobile}"
+                             TextColor="Black"  
+                             FontAttributes="None"  
+                            />
+
+
+
+              
+
+            </Grid >
+            <Grid Grid.Row="2" ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Command="{Binding ApplyCommand}" VerticalOptions="CenterAndExpand"  BorderColor="#A1C51E" CornerRadius="7" HorizontalOptions="EndAndExpand" Text="APPLY" BackgroundColor="#A1C51E" TextColor="White" WidthRequest="130" HeightRequest="50"/>
+                <Button Grid.Column="1" Command="{Binding CancelCommand}" VerticalOptions="CenterAndExpand" BorderColor="#A1C51E" CornerRadius="7" HorizontalOptions="StartAndExpand" Text="CANCEL" BackgroundColor="White" TextColor="Black" WidthRequest="130" HeightRequest="50"></Button>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

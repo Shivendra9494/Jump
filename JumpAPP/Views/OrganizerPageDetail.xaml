@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:controls="clr-namespace:JumpAPP.Controls"
+             x:Class="JumpAPP.Views.OrganizerPageDetail" Title="Week Days"
+             
+             BackgroundColor="White">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{Binding Username}" Order="Primary" ></ToolbarItem>
+        <ToolbarItem  Icon="filter.png" Order="Primary"
+                Command="{Binding SearchCommandBinding}" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+    <AbsoluteLayout>
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1"  
+        AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional">
+            <Grid ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" BackgroundColor = "White">
+                </StackLayout>
+                <StackLayout Margin="0,3,0,3"  Grid.Row="1" Grid.Column="0" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" BackgroundColor = "#f2f2f2">
+                </StackLayout>
+                <StackLayout  Grid.Row="1" Grid.Column="1" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="firstDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="firstDate" Text = "" ClassId="1"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1"
+                            Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="2" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="secondDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="secondDate" Text = "" ClassId="2"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1" Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="3" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="thirdDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="thirdDate" Text = "" ClassId="3"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1"  Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="4" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="fourthDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="fourthDate" Text = "" ClassId="4"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1" Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="1" Grid.Column="5" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="fifthDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="fifthDate" Text = "" ClassId="5"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1" Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="6" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="sixthDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="sixthDate" Text = "" ClassId="6"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1"  Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="7" HorizontalOptions = "FillAndExpand" VerticalOptions = "CenterAndExpand" BackgroundColor = "#f2f2f2">
+                    <Label x:Name="seventhDayOfWeek" Text="" 
+                           BackgroundColor = "Transparent"
+                           VerticalTextAlignment = "Center"
+                           HorizontalTextAlignment = "Center"
+                           FontAttributes = "Bold"
+                           TextColor = "#6A6F6E"/>
+                    <Button x:Name="seventhDate" Text = "" ClassId="7"
+                            BackgroundColor = "Transparent"
+                            CornerRadius = "15"
+                            WidthRequest = "30"
+                            HeightRequest = "30"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            TextColor = "#6A6F6E"
+                            BorderWidth = "1"  Padding = "0" Margin="4" Clicked="UpdateSelectedDate"/>
+                </StackLayout>
+                <Grid.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="OnLeftSwipe"/>
+                    <SwipeGestureRecognizer Direction="Right" Swiped="OnRightSwipe"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <ScrollView x:Name="scrollStack">
+
+            </ScrollView>
+        </StackLayout>
+
+        <Image Source="dropdowns" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.999999999999,0.99999999,110,110"   
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding DropdownTap}" NumberOfTapsRequired="1"></TapGestureRecognizer>
+            </Image.GestureRecognizers>
+        </Image>
+        <controls:DatePickerCtrl x:Name="MainDatePicker" DateSelected="MainDatePicker_DateSelected" Format="MMMM, yyyy" AbsoluteLayout.LayoutBounds="0.05,0.009,170,50" HorizontalOptions="StartAndExpand"    
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional"></controls:DatePickerCtrl>
+
+        <Image Source="arrow"
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.05,0.033,140,20" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image Source="mail" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.939,0.89,70,70" IsVisible="{Binding mail}"   
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" />
+
+        <Image Source="pdf" 
+                Aspect="AspectFit" 
+                AbsoluteLayout.LayoutBounds="0.939,0.80,70,70" IsVisible="{Binding pdf}"  
+        AbsoluteLayout.LayoutFlags="XProportional,YProportional" />
+    </AbsoluteLayout>
+
+</ContentPage>

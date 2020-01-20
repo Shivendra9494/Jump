@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:BottomNavTabPage
+    xmlns:controls="clr-namespace:JumpAPP.Controls" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:JumpAPP.Views"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    BarBackgroundColor="#A1C51E"
+    BarTextColor="White"
+    android:TabbedPage.BarItemColor="#DDE28F"
+    android:TabbedPage.BarSelectedItemColor="White"
+    x:Class="JumpAPP.Views.MainPage">
+  <!--Pages can be added as references or inline-->
+    <views:OrganizerPage Title="Organiser"  IconImageSource="sort" HeightRequest="20" WidthRequest="20"></views:OrganizerPage>
+    <views:ContactPage Title="Conatct" BackgroundColor="White" IconImageSource="phone" HeightRequest="20" WidthRequest="20"></views:ContactPage>
+    <views:CompanyPage Title="Company" IconImageSource="company" HeightRequest="20" WidthRequest="20"></views:CompanyPage>
+    <views:MorePage Title="More" IconImageSource="more" HeightRequest="20" WidthRequest="20"></views:MorePage>
+ </controls:BottomNavTabPage>
